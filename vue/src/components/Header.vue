@@ -1,28 +1,38 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{ title }}</a>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/">Student List</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="fields">Fields</router-link>
-                </li>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <router-link class="navbar-brand" to="/">{{ title }}</router-link>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/">Students Details</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/addstudent">Add Student</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" to="/addfields">Add Student Fields</router-link>
+                    </li>
+                </ul>
                 
-            </ul>
-        </div>
+                </div>
+            </div>
+            </nav>
     </div>
-    </nav>
 </template>
 
+
 <script>
-export default{
-    name: 'Header',
-    props: {
-        title: String,
+    export default{
+        name: 'Header',
+        props: {
+            title: String
+        }
     }
-}
 </script>

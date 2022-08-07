@@ -1,4 +1,4 @@
-# vue-assessment
+# vue
 
 ## Project setup
 ```

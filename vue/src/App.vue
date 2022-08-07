@@ -1,22 +1,18 @@
 <template>
-  <div>
-    <Header title="Vue assessment" />
-    <router-view></router-view>
-  </div>
+    <div>
+      <Header title="Vue Assessment"/>
+      <router-view></router-view>
+    </div>
 </template>
 
-
 <script>
-import Header from './components/Header.vue';
 
+import Header from './components/Header.vue';
 export default {
-  name: 'App',
-  components: {
-    Header 
+    name: 'App',
+    components: {
+    Header
   }
 }
 </script>
 
-<style>
-
-</style>
