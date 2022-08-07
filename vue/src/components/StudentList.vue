@@ -42,7 +42,6 @@ import axios from 'axios';
                 let url = 'http://127.0.0.1:8000/api/student';
                 await axios.get(url).then(response => {
                     this.studentlist = response.data.student;
-
                 }).catch(error => {
                     console.log(error);
                 });

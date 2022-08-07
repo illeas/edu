@@ -14,6 +14,9 @@
                         <router-link class="nav-link" to="/">Students Details</router-link>
                     </li>
                     <li class="nav-item">
+                        <router-link class="nav-link" to="/fieldslist">Students Fields</router-link>
+                    </li>
+                    <li class="nav-item">
                         <router-link class="nav-link" to="/addstudent">Add Student</router-link>
                     </li>
                     <li class="nav-item">
