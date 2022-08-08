@@ -33,4 +33,19 @@ class StudentController extends Controller
             ]);
         }
     }
+
+    public function deleteStudent($id){
+        $student = Student::find($id);
+        if($student){
+            $student->delete();
+            return response()->json([
+                'message' => 'Student successfully deleted!',
+                'code' => 200
+            ]);
+        }else{
+            return response()->json([
+                'message' => "Student with id:$id dose not exits"
+            ]);
+        }
+    }
 }

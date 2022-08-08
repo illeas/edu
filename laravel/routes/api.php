@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('student', [App\Http\Controllers\StudentController::class, 'student']);
 Route::post('register', [App\Http\Controllers\StudentController::class, 'register']);
+Route::delete('deleteStudent/{id}', [App\Http\Controllers\StudentController::class, 'deleteStudent']);
 
 Route::get('getFields', [App\Http\Controllers\FieldController::class, 'getFields']);
 Route::post('addFields', [App\Http\Controllers\FieldController::class, 'addFields']);
