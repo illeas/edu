@@ -18,6 +18,7 @@
                     <th scope="row">{{ studentlist.name }}</th>
                     <th scope="row">{{ studentlist.email_address }}</th>
                     <th scope="row">{{ studentlist.contact_number }}</th>
+                    <th scope="row"><router-link :to="{ name: 'EditStudent', params: { id: studentlist.id}  }" class="btn btn-info btn-sm">Edit</router-link></th>
                     <th scope="row"><button class="btn btn-danger btn-sm" @click.prevent="deleteStudent(studentlist.id)">Delete</button></th>
                 </tr>
             </tbody>

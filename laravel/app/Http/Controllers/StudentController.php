@@ -34,6 +34,28 @@ class StudentController extends Controller
         }
     }
 
+    public function getStudent($id){
+        $student = Student::find($id);
+        return response()->json($student);
+    }
+
+    public function updateStudent($id, Request $request){
+        $student = Student::where('id', $id)->first();
+        $student->class = $request->class;
+        $student->name = $request->name;
+        $student->email_address = $request->email_address;
+        $student->contact_number = $request->contact_number;
+        if($request->password != ''){
+            $student->password = bcrypt($request->password);
+        }
+        if($student->save()){
+            return response()->json([
+                'message' => "Student successfully updated",
+                'code' => 200
+            ]);
+        }
+    }
+
     public function deleteStudent($id){
         $student = Student::find($id);
         if($student){

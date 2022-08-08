@@ -2,6 +2,7 @@ import StudentList from '../components/StudentList.vue';
 import FieldsList from '../components/FieldsList'
 import AddFields from '../components/AddFields.vue';
 import AddStudent from '../components/AddStudent.vue';
+import EditStudent from '../components/editStudent.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 
@@ -22,6 +23,10 @@ const routes = [
         name: 'FieldsList',
         path: '/fieldslist',
         component: FieldsList
+    },{
+        name: 'EditStudent',
+        path: '/student/edit/:id?',
+        component: EditStudent
     }
 ];
 
