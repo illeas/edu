@@ -24,6 +24,7 @@ class StudentController extends Controller
         $student->name = $request->name;
         $student->email_address = $request->email_address;
         $student->contact_number = $request->contact_number;
+        $student->password = bcrypt($request->password);
 
         if($student->save()){
             return response()->json([

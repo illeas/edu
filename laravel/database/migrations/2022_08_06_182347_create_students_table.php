@@ -18,7 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('class')->nullable();
             $table->string('name')->nullable();
             $table->string('email_address')->unique()->nullable();
-            $table->string('password')->nullable();
+            $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('contact_number')->nullable();
             $table->tinyInteger('status')->comment('0: unconfirmed, 1: admitted, 2: terminated ')->nullable();
